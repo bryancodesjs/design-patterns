@@ -19,6 +19,9 @@
     width:80px;
 }
 
+.miner-body {
+    cursor: pointer;
+}
 .miner-body .fan.on {
     animation: rotating 1s linear infinite;
 }
