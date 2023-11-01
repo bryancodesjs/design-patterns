@@ -22,3 +22,7 @@ article {
 .form-card {
     max-width:300px;
 }
+
+#main {
+    overflow-y: scroll;
+}

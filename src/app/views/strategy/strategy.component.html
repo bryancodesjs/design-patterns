@@ -1,1 +1,80 @@
-<p>strategy works!</p>
+<article>
+  <h4>Strategy Design Pattern</h4>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore totam
+    tempora illum quo voluptates sed ipsam vel ad fugiat sequi.
+  </p>
+  <hr />
+
+  <h5>Context</h5>
+  <p>
+    In this example, we're simulating we are in a video game. On this view, we
+    can add new <em>Humans(characters)</em> to our team by choosing from for
+    types of humans:
+  </p>
+  <ul>
+    <li>Warrior</li>
+    <li>Scientist</li>
+    <li>Builder</li>
+    <li>Witch</li>
+  </ul>
+  <p>
+    There's a base interface called <em>Human</em> that defines the shape of a
+    human object. In general, a <em>Human</em> object performs a default action,
+    but we don't define the logic of the action on the human interface itself.
+    The base <em>Human</em> interface only tells us a human is supposed to
+    perform an action, but the actions of your chosen humans will vary based on
+    the type of human you choose.
+  </p>
+
+  <p>
+    While a <em>Warrior's</em> action consists on slashing with a sword, a
+    builder's action consists on building things, and so on.
+  </p>
+
+  <hr />
+  <h5>Add a new character to your team</h5>
+  <div class="card form-card mb-4">
+    <div class="card-body">
+      <form [formGroup]="form" action="" class="row g-2" (ngSubmit)="submit()">
+        <h6 class="mb-0">Select a human type</h6>
+        <div class="col">
+          <div class="form-group">
+            <div class="input-group input-group-sm">
+              <select
+                class="form-select"
+                name=""
+                formControlName="humanType"
+                id=""
+                [class.is-invalid]="!form.valid"
+              >
+                <option value="warrior">warrior</option>
+                <option value="builder">doctor</option>
+                <option value="scientist">scientist</option>
+                <option value="witch">witch</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto">
+          <button [disabled]="!form.valid" class="btn btn-sm btn-primary">
+            ADD CHARACTER
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <h5>Your team</h5>
+  <p>Click on a character to perform its action</p>
+
+  <div class="d-flex gap-3">
+    <div
+      class="character-card"
+      *ngFor="let character of characters"
+      (click)="character.action()"
+    >
+      <p>Clan</p>
+    </div>
+  </div>
+</article>
