@@ -25,4 +25,5 @@ article {
 
 #main {
     overflow-y: scroll;
+    width:100%;
 }
