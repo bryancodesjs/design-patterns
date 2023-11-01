@@ -23,8 +23,8 @@ export class FactoryComponent {
       const miner = this._factory.createMiner(
         this.form.controls['hash_rate'].value
       );
-      console.log(miner);
       this.miners.push(miner);
+      this.form.reset();
     }
   }
 }
