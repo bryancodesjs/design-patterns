@@ -5,4 +5,27 @@
     min-height: 45px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    color:white;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.character-card.witch {
+    background-image: url('/assets/images/witch.webp');
+}
+
+.character-card.builder {
+    background-image: url('/assets/images/builder.webp');
+}
+
+.character-card.warrior {
+    background-image: url('/assets/images/warrior.webp');
+}
+
+.character-card.scientist {
+    background-image: url('/assets/images/scientist.webp');
 }

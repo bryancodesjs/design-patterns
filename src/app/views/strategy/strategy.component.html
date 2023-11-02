@@ -49,7 +49,7 @@
                 [class.is-invalid]="!form.valid"
               >
                 <option value="warrior">warrior</option>
-                <option value="builder">doctor</option>
+                <option value="builder">builder</option>
                 <option value="scientist">scientist</option>
                 <option value="witch">witch</option>
               </select>
@@ -71,10 +71,12 @@
   <div class="d-flex gap-3">
     <div
       class="character-card"
+      [class]="character.type"
       *ngFor="let character of characters"
       (click)="character.action()"
     >
-      <p>Clan</p>
+      <p class="mb-0 text-uppercase">{{ character.type }}</p>
+      <p class="mb-0"><small>Click to reveal message</small></p>
     </div>
   </div>
 </article>

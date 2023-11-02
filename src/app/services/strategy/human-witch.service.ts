@@ -5,9 +5,11 @@ import { Human } from './Human.model';
   providedIn: 'root',
 })
 export class HumanWitchService implements Human {
+  type = 'witch';
+  message = 'I am a witch!';
   constructor() {}
 
   action() {
-    console.log('I cast a spell on you!');
+    window.alert(this.message);
   }
 }

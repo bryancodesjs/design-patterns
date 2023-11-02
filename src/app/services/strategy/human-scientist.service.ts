@@ -5,9 +5,11 @@ import { Human } from './Human.model';
   providedIn: 'root',
 })
 export class HumanScientistService implements Human {
+  type = 'scientist';
+  message = "I'm a scientist!";
   constructor() {}
 
   action() {
-    console.log('I will invent a new technology!');
+    window.alert(this.message);
   }
 }

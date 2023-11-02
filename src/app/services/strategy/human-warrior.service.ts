@@ -5,9 +5,11 @@ import { Human } from './Human.model';
   providedIn: 'root',
 })
 export class HumanWarriorService implements Human {
+  type = 'warrior';
+  message = 'I am a warrior!';
   constructor() {}
 
   action() {
-    console.log('I will fight for my king!');
+    window.alert(this.message);
   }
 }

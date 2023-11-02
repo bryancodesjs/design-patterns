@@ -5,9 +5,11 @@ import { Human } from './Human.model';
   providedIn: 'root',
 })
 export class HumanBuilderService implements Human {
+  type = 'builder';
+  message = "I'm a builder!";
   constructor() {}
 
   action() {
-    console.log('Leave the castle restoration to me!');
+    window.alert(this.message);
   }
 }
