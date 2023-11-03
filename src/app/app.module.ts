@@ -8,6 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { FactoryComponent } from './views/factory/factory.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StrategyComponent } from './views/strategy/strategy.component';
+import { DecoratorComponent } from './views/decorator/decorator.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { StrategyComponent } from './views/strategy/strategy.component';
     HomeComponent,
     FactoryComponent,
     StrategyComponent,
+    DecoratorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
